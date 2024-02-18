@@ -1,0 +1,16 @@
+{
+    "name": "melnikov/basic_app",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roman",
+            "email": "meln.r.1998@gmail.com"
+        }
+    ],
+    "require": {}
+}
