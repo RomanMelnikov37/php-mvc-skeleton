@@ -6,6 +6,7 @@ class RouteDispatcher
 {
     private string $requestUri = '/';
     private array  $paramMap   = [];
+    private array  $paramRequestMap   = [];
 
     /**
      * @param RouteConfig $routeConfig
@@ -14,11 +15,12 @@ class RouteDispatcher
     {
     }
 
-    public function process()
+    public function process(): void
     {
         $this->saveRequestUri();
         $this->setParamMap();
         $this->makeRegexRequest();
+        $this->run();
     }
 
     /**
@@ -69,6 +71,7 @@ class RouteDispatcher
                 return;
             }
 
+            $this->paramRequestMap[$param] = $requestUriArray[$paramKey];
             $requestUriArray[$paramKey] = '{.*}';
         }
 
@@ -93,6 +96,8 @@ class RouteDispatcher
         $ClassName = $this->routeConfig->controller;
         $action = $this->routeConfig->action;
 
-        (new $ClassName)->$action();
+        (new $ClassName)->$action(...$this->paramRequestMap);
+
+        die;
     }
 }
