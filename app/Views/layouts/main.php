@@ -8,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-
+    <header>шапка</header>
+    <main>
+        <?= $content ?>
+    </main>
+    <footer>подвал</footer>
 </body>
 </html>

@@ -10,9 +10,9 @@ class View
     public static function view(string $path, array $data = []): string
     {
         self::$data = $data;
-        self::$path = ROOT . 'resources/views' . str_replace('.', '/', $path) . '.php';
+        self::$path = str_replace('.', '/', $path) . '.php';
 
-        return self::getContent();
+        return self::render();
     }
 
     private static function getContent(): string
@@ -20,6 +20,15 @@ class View
         extract(self::$data);
         ob_start();
         include self::$path;
+
+        return ob_get_clean();
+    }
+
+    private static function render(): string
+    {
+        $content = self::getContent();
+        ob_start();
+        include 'layouts/main.php';
 
         return ob_get_clean();
     }

@@ -9,6 +9,6 @@ define('ROOT', dirname(__DIR__));
 
 // Подключаем авто загрузчик классов Composer
 require ROOT . '/vendor/autoload.php';
-require ROOT . '/routes/web.php';
+require ROOT . '/config/routes.php';
 
 App::run();

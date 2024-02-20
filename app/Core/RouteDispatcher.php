@@ -96,8 +96,8 @@ class RouteDispatcher
         $ClassName = $this->routeConfig->controller;
         $action = $this->routeConfig->action;
 
-        (new $ClassName)->$action(...$this->paramRequestMap);
-
+        $content = (new $ClassName)->$action(...$this->paramRequestMap);
+        echo $content; // todo add Response
         die;
     }
 }
