@@ -2,4 +2,8 @@
 /.vscode
 /node_modules
 /storage/docker
+/storage/logs/*.log
+/storage/uploads/
+/storage/sessions/
+/cache/
 /vendor
