@@ -13,7 +13,7 @@
 ## Установка
 
 1. Клонируйте репозиторий на свой локальный компьютер: 
-- git clone https://github.com/your/repository.git
+- git clone https://github.com/RomanMelnikov37/php-mvc-skeleton.git
 2. Установите зависимости с помощью Composer: 
 - composer install
 3. Запустите приложение с помощью Docker Compose: 
