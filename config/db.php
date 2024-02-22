@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'host'     => 'localhost:8101',
+    'host'     => 'basic_db',
     'db'       => 'basic',
     'login'    => 'root',
     'password' => 'root',

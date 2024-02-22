@@ -21,7 +21,7 @@
 > composer install
 3. Запустите приложение с помощью Docker Compose: 
 > docker-compose up -d
-4. Веб-сервер будет доступен по адресу http://localhost:8000/
+4. Веб-сервер будет доступен по адресу http://localhost:8080/
 
 ## Структура Каталогов
 
